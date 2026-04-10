@@ -43,14 +43,13 @@ git commit -m "chore: add gitignore for environment variables"
 ### Part 2: Stashing Half-Baked Code
 
 #### 3. Halfway Done with a File
-Let's pretend we are writing a new complex feature.
-Create a file called `complex_ui.txt` and start adding code:
+Let's pretend we are adding `node_modules` folder to `.gitignore` so that it is not pushed.
+Open the file called `.gitignore` and start adding code below the line containing `.env`:
 ```text
-HEADER
-NAVBAR
+node_
 ```
 
-We aren't done. We still need to add `FOOTER`, but... **🚨 EMERGENCY! 🚨** You must switch back to `main` instantly to fix a production bug. You can't switch branches because Git warns you that you have uncommitted changes. You don't want to make an ugly `WIP` commit.
+We aren't done. We still need to add `modules`, but... **🚨 EMERGENCY! 🚨** You must switch back to `main` instantly to fix a production bug. You can't switch branches because Git warns you that you have uncommitted changes. You don't want to make an ugly `WIP` commit.
 
 #### 4. The Magic of Stashing
 
@@ -58,7 +57,7 @@ Tell Git to sweep your current uncommitted changes into a temporary box.
 ```bash
 git stash
 ```
-Run `git status`. Your working directory is completely clean! Look at your files. `complex_ui.txt` is missing! Where did it go?
+Run `git status`. Your working directory is completely clean! Look at your files. `node_` is missing from the `.gitignore` file ! Where did it go?
 
 #### 5. Fixing the Bug
 Now you're free to switch branches!
@@ -75,6 +74,8 @@ To get your half-baked code back, you just tell Git to open the box!
 ```bash
 git stash pop
 ```
-`complex_ui.txt` is instantly restored, exactly in the half-done state you left it. Now you can finish your feature, add `FOOTER`, and finally commit!
+`node_` is instantly restored, exactly in the half-done state you left it. Now you can finish adding node_modules to gitignore, add `modules`, and finally commit!
+
+After commiting, move on to the next step
 
 ➡️ **Next Up:** [Module 7: Syncing Your Fork](./07-SYNCING-FORKS.md)

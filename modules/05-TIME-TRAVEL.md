@@ -19,7 +19,11 @@ Create `server.txt` and add this text:
 Port: 8080
 Connections: Allowed
 ```
-Commit it: `git commit -am "chore: created server config"`
+Commit it: 
+```bash
+git add .
+git commit -m "chore: created server config"
+```
 
 Now... let's introduce a terrible mistake! Change `Connections: Allowed` to `Connections: Disabled`.
 Commit it: `git commit -am "fix: improved server security by disabling connections"`
