@@ -1,4 +1,4 @@
-# Module 2: Branching & Merging
+git checkout main# Module 2: Branching & Merging
 
 When working on a large application, different tasks are split up among developers using branches. Sometimes they are simple feature additions, and sometimes they involve merging diverging pathways.
 
