@@ -24,7 +24,11 @@ Create a file called `math_tools.py` (or `.js`):
 def add(a, b):
     return a - b
 ```
-Commit it: `git commit -am "WIP math"`
+Commit it: 
+```
+git add .
+git commit -m "WIP math"
+```
 
 2. Oh wait! That contains a bug! Fix the `-` to `+`.
 ```python
